@@ -1,0 +1,101 @@
+{{!-- No logro que el buscador sea más ancho. Si lo hago no queda alineado --}}
+
+<header style="background-color: #fff">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-2 d-flex justify-content-center align-items-center">
+				<a href="/">
+					<img src="https://i.postimg.cc/xCwzrS8D/zowygal-1.png" alt="Logo">
+				</a>
+			</div>
+			<div class="col-3 d-flex justify-content-center align-items-center">
+				<a class="link-dark text-decoration-none" href="/">
+					<h1>Z o e & G a l</h1>
+				</a>
+			</div>
+			<div class="col-3 d-flex align-items-center justify-content-center">
+				<form class="d-flex" role="search">
+					<input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+					<button style="background-color: #EBC2B1" class="btn btn-outline" type="submit">Buscar</button>
+				</form>
+			</div>
+
+			<div class="col-3 d-flex justify-content-end align-items-center p-3">
+				{{!-- VIEJO CARRITO
+				<i class="bi bi-cart2 p-3"></i> --}}
+				<div class="container-icon">
+					<div class="container-cart-icon">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+							stroke="currentColor" class="icon-cart">
+							<path stroke-linecap="round" stroke-linejoin="round"
+								d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+						</svg>
+						<div class="count-products">
+							<span id="contador-productos">0</span>
+						</div>
+					</div>
+
+					<div class="container-cart-products hidden-cart">
+						<div class="row-product hidden">
+							<div class="cart-product">
+								<div class="info-cart-product">
+									<span class="cantidad-producto-carrito"></span>
+									<p class="titulo-producto-carrito"></p>
+									<span class="precio-producto-carrito"></span>
+								</div>
+
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+									stroke-width="1.5" stroke="currentColor" class="icon-close">
+									<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+								</svg>
+							</div>
+						</div>
+
+
+						<div class="cart-total hidden">
+							<h3>Total:</h3>
+							<span class="total-pagar"></span>
+													<div class="confirm container d-flex justify-content-center pt-2">
+							<a href="/">
+								<button type="button" style="background-color: black; color:#fff" class="btn-buy btn-dark text-center rounded-pill ps-5 pe-5" disabled>Comprar (proximamente)</button>
+							</a>
+						</div>
+						</div>
+						
+						<p class="cart-empty">El carrito está vacío</p>
+					</div>
+				</div>
+
+				{{#if user}}
+				<div class="dropdown">
+					<button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+						<i class="bi bi-person"></i>
+					</button>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+						<li><a class="dropdown-item" href="/logout">Cerrar Sesión</a></li>
+					</ul>
+				</div>
+				{{else}}
+				<div class="dropdown">
+					<button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+						<i class="bi bi-person"></i>
+					</button>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+						<li><a class="dropdown-item" href="/login">Iniciar Sesión</a></li>
+						<li><a class="dropdown-item" href="/signup">Registrarse</a></li>
+					</ul>
+				</div>
+				{{/if}}
+
+			</div>
+		</div>
+	</div>
+
+
+
+	{{>navbar}}
+
+
+	<div class="divider pb-1 bg-white"></div>
+
+</header>

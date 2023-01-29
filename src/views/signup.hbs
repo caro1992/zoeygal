@@ -1,0 +1,33 @@
+<h1 class="text-center mt-2"> Registrarse </h1>
+
+<div class="container col-4 mt-5 mb-5 justify-content-center">
+  <form action="/signup" method="POST">
+    <div class="mb-4">
+      <label for="name" class="form-label">Nombre*</label>
+      <input type="text" class="form-control" name="name" id="name" value="{{name}}" required>
+    </div>
+    <div class="mb-4">
+      <label for="surname" class="form-label">Apellido*</label>
+      <input type="text" class="form-control" name="surname" id="name" value="{{surname}}" required>
+    </div>
+    <div class="mb-4">
+      <label for="exampleInputEmail1" class="form-label">Dirección de correo electrónico*</label>
+      <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{email}}" required>
+    </div>
+    <div class="mb-4">
+      <label for="exampleInputPassword1" class="form-label">Contraseña*</label>
+      <input type="password" class="form-control" name="password" id="exampleInputPassword1" required>
+      <p style="font-size: small;">La contraseña debe tener al menos 8 caracteres</p>
+    </div>
+    <div class="mb-4">
+      <label for="exampleInputPassword1" class="form-label">Repetir contraseña*</label>
+      <input type="password" class="form-control" name="confirm_password" id="exampleInputPassword2" required>
+      <div class="d-grid mt-4 mb-1">
+        <button type="submit" class="btn btn-dark rounded-pill ps-5 pe-5">Registrarse</button>
+      </div>
+    </div>
+    <div class="mb-5">
+      <p class="text-center"><a href="/login">Ya tengo una cuenta</a></p>
+    </div>
+  </form>
+</div>

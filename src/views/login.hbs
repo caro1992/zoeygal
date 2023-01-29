@@ -1,0 +1,21 @@
+<h1 class="text-center mt-2"> Iniciar Sesión </h1>
+
+<div class="container col-4 mt-5 mb-5 justify-content-center">
+<form action="/login" method="POST">
+  <div class="mb-4">
+    <label for="exampleInputEmail1" class="form-label">Dirección de correo electrónico</label>
+    <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+  </div>
+  <div class="mb-4">
+    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+    <input type="password" class="form-control" name="password" id="exampleInputPassword1" required>
+  <div class="d-grid mt-4 mb-1">
+        <button type="submit"  class="btn btn-dark rounded-pill ps-5 pe-5">Enviar</button>
+  </div>
+  </div>
+  <div class="mb-5">
+   <p>¿No tenés cuenta? Registrate <a href="/signup">aquí</a></p>
+   </div>
+  
+</form>
+</div>
